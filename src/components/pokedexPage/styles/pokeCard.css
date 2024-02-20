@@ -1,0 +1,341 @@
+.poke__card {
+  position: relative;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.poke__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 25px;
+}
+
+.grass::before {
+  background: linear-gradient(
+    to bottom,
+    #78c850 0%,
+    #78c850 35%,
+    transparent 35%
+  );
+  border: 5px solid #4e8231;
+}
+
+.fire::before {
+  background: linear-gradient(
+    to bottom,
+    #f08030 0%,
+    #f08030 35%,
+    transparent 35%
+  );
+  border: 5px solid #c76723;
+}
+
+.water::before {
+  background: linear-gradient(
+    to bottom,
+    #6890f0 0%,
+    #6890f0 35%,
+    transparent 35%
+  );
+  border: 5px solid #5068b8;
+}
+
+.bug::before {
+  background: linear-gradient(
+    to bottom,
+    #a8b820 0%,
+    #a8b820 35%,
+    transparent 35%
+  );
+  border: 5px solid #8c9a1a;
+}
+
+.normal::before {
+  background: linear-gradient(
+    to bottom,
+    #a8a878 0%,
+    #a8a878 35%,
+    transparent 35%
+  );
+  border: 5px solid #8c8c6a;
+}
+
+.fighting::before {
+  background: linear-gradient(
+    to bottom,
+    #c03028 0%,
+    #c03028 35%,
+    transparent 35%
+  );
+  border: 5px solid #a12823;
+}
+
+.poison::before {
+  background: linear-gradient(
+    to bottom,
+    #a040a0 0%,
+    #a040a0 35%,
+    transparent 35%
+  );
+  border: 5px solid #853486;
+}
+
+.electric::before {
+  background: linear-gradient(
+    to bottom,
+    #f8d030 0%,
+    #f8d030 35%,
+    transparent 35%
+  );
+  border: 5px solid #dab827;
+}
+
+.ground::before {
+  background: linear-gradient(
+    to bottom,
+    #e0c068 0%,
+    #e0c068 35%,
+    transparent 35%
+  );
+  border: 5px solid #c7a258;
+}
+
+.fairy::before {
+  background: linear-gradient(
+    to bottom,
+    #ee99ac 0%,
+    #ee99ac 35%,
+    transparent 35%
+  );
+  border: 5px solid #d88a96;
+}
+
+.psychic::before {
+  background: linear-gradient(
+    to bottom,
+    #f85888 0%,
+    #f85888 35%,
+    transparent 35%
+  );
+  border: 5px solid #d84b73;
+}
+
+.rock::before {
+  background: linear-gradient(
+    to bottom,
+    #b8a038 0%,
+    #b8a038 35%,
+    transparent 35%
+  );
+  border: 5px solid #9a8631;
+}
+
+.ghost::before {
+  background: linear-gradient(
+    to bottom,
+    #705898 0%,
+    #705898 35%,
+    transparent 35%
+  );
+  border: 5px solid #5d4b7a;
+}
+
+.ice::before {
+  background: linear-gradient(
+    to bottom,
+    #98d8d8 0%,
+    #98d8d8 35%,
+    transparent 35%
+  );
+  border: 5px solid #83bdbd;
+}
+
+.dragon::before {
+  background: linear-gradient(
+    to bottom,
+    #7038f8 0%,
+    #7038f8 35%,
+    transparent 35%
+  );
+  border: 5px solid #5d2fd0;
+}
+
+.dark::before {
+  background: linear-gradient(
+    to bottom,
+    #705848 0%,
+    #705848 35%,
+    transparent 35%
+  );
+  border: 5px solid #5d493b;
+}
+
+.steel::before {
+  background: linear-gradient(
+    to bottom,
+    #b8b8d0 0%,
+    #b8b8d0 35%,
+    transparent 35%
+  );
+  border: 5px solid #9a9ab3;
+}
+
+.flying::before {
+  background: linear-gradient(
+    to bottom,
+    #a890f0 0%,
+    #a890f0 35%,
+    transparent 35%
+  );
+  border: 5px solid #8c78d0;
+}
+
+.poke__card:hover {
+  transform: scale(1.05);
+}
+
+.poke__card div {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  border-radius: 25px 25px 0 0;
+}
+
+.poke__card figure {
+  position: relative;
+  width: 150px;
+  z-index: 10;
+}
+
+.poke__card hr {
+  width: 85%;
+}
+
+.poke__stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 15px;
+  width: 85%;
+  gap: 10px;
+}
+
+.poke__stats li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slot2::before {
+  content: "/";
+}
+
+.poke__card.normal .poke__name,
+.poke__card.normal .poke__stats span {
+  color: #8c8c6a;
+}
+
+.poke__card.fighting .poke__name,
+.poke__card.fighting .poke__stats span {
+  color: #a12823;
+}
+
+.poke__card.flying .poke__name,
+.poke__card.flying .poke__stats span {
+  color: #8c78d0;
+}
+
+.poke__card.poison .poke__name,
+.poke__card.poison .poke__stats span {
+  color: #853486;
+}
+
+.poke__card.ground .poke__name,
+.poke__card.ground .poke__stats span {
+  color: #c7a258;
+}
+
+.poke__card.rock .poke__name,
+.poke__card.rock .poke__stats span {
+  color: #9a8631;
+}
+
+.poke__card.bug .poke__name,
+.poke__card.bug .poke__stats span {
+  color: #8c9a1a;
+}
+
+.poke__card.ghost .poke__name,
+.poke__card.ghost .poke__stats span {
+  color: #5d4b7a;
+}
+
+.poke__card.steel .poke__name,
+.poke__card.steel .poke__stats span {
+  color: #9a9ab3;
+}
+
+.poke__card.fire .poke__name,
+.poke__card.fire .poke__stats span {
+  color: #c76723;
+}
+
+.poke__card.water .poke__name,
+.poke__card.water .poke__stats span {
+  color: #5068b8;
+}
+
+.poke__card.grass .poke__name,
+.poke__card.grass .poke__stats span {
+  color: #4e8231;
+}
+
+.poke__card.electric .poke__name,
+.poke__card.electric .poke__stats span {
+  color: #dab827;
+}
+
+.poke__card.psychic .poke__name,
+.poke__card.psychic .poke__stats span {
+  color: #d84b73;
+}
+
+.poke__card.ice .poke__name,
+.poke__card.ice .poke__stats span {
+  color: #83bdbd;
+}
+
+.poke__card.dragon .poke__name,
+.poke__card.dragon .poke__stats span {
+  color: #5d2fd0;
+}
+
+.poke__card.dark .poke__name,
+.poke__card.dark .poke__stats span {
+  color: #5d493b;
+}
+
+.poke__card.fairy .poke__name,
+.poke__card.fairy .poke__stats span {
+  color: #d88a96;
+}
+
+.poke__card.unknown .poke__name,
+.poke__card.unknown .poke__stats span {
+  color: #000000;
+}
+
+.poke__card.shadow .poke__name,
+.poke__card.shadow .poke__stats span {
+  color: #000000;
+}

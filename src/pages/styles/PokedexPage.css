@@ -1,0 +1,169 @@
+.top-bar {
+  height: 133px;
+  background: linear-gradient(to bottom, red 70%, #0c0c0c 70%);
+  display: flex;
+}
+
+.red-section {
+  height: 120%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.black-section {
+  height: 45%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 20px;
+  position: relative;
+}
+
+.red-section img {
+  max-height: 300px;
+  max-width: 300px;
+}
+
+.black-section img {
+  position: absolute;
+  bottom: -100px;
+  right: 0.9px;
+  max-height: 100px;
+  max-width: 100px;
+}
+
+.poke__header input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 200px;
+}
+
+.poke__header button {
+  padding: 11px 11px;
+  font-size: 16px;
+}
+
+.pokedex {
+  padding-bottom: 25px;
+}
+
+.poke__header {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  gap: 10px;
+}
+
+.poke__header h3 {
+  text-align: center;
+}
+
+.poke__header div {
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.poke__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.grid-container {
+  width: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 40px;
+}
+
+@media (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .poke__header div {
+    flex-direction: column;
+  }
+
+  .poke__header form {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.pagination button {
+  margin: 0 0.2vw;
+  padding: 8px 16px;
+  font-size: 1em;
+  color: black;
+  background-color: transparent;
+  border: 1px solid transparent;
+  transition: background-color 0.3s ease;
+}
+
+.pagination .active-page {
+  color: black;
+  background-color: red;
+  border: 1px solid transparent;
+}
+
+.pagination .active-page:hover {
+  background-color: red;
+}
+
+.pagination .next-page {
+  color: black;
+  background-color: red;
+  border: 1px solid transparent;
+}
+
+.error-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  text-align: center;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-button {
+  cursor: pointer;
+}
+
+.error-button:hover {
+  background-color: #ff0000;
+  color: #ffffff;
+}
