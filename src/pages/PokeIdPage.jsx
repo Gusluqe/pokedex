@@ -57,40 +57,44 @@ const PokeIdPage = () => {
                 alt={pokeData.name}
               />
               <div className="info">
-                <h1>#{pokemonNumber}</h1>
-                <br />
+              
+                <h1>#{pokemonNumber}</h1><hr width='auto' />
+                
                 <h2 className="name">{pokeData.name}</h2>
                 <div className="stats">
                   <p>
-                    Peso: <br /> {pokeData.weight}
+                    Peso :   <br/> {pokeData.weight}
                   </p>
+                  <br/>
                   <p>
-                    Altura: <br /> {pokeData.height}
+                    Altura :  <br/>{pokeData.height}
                   </p>
                 </div>
                 <div className="types-abilities">
                   <h3>Tipo:</h3>
-                  <ul>
+                  <ul><br/>
                     {pokeData.types.map((type, index) => (
                       <li key={index}>{type.type.name}</li>
                     ))}
                   </ul>
                   <h3>Habilidades:</h3>
-                  <ul>
+                  <ul><br/>
                     {pokeData.abilities.map((ability, index) => (
                       <li key={index}>{ability.ability.name}</li>
                     ))}
                   </ul>
                 </div>
-                <h3>Estadísticas:</h3>
-                <ul>
-                  {pokeData.stats.map((stat) => (
-                    <li key={stat.stat.name}>
-                      {statTranslations[stat.stat.name]}:{" "}
-                      {Math.min(stat.base_stat, 150)}
-                    </li>
-                  ))}
-                </ul>
+                <h3 className="poke__titulo">Estadísticas:</h3>
+                  <div >
+                    <ul  className="poke__lista">
+                      {pokeData.stats.map((stat) => (
+                        <li key={stat.stat.name}>
+                          {statTranslations[stat.stat.name]}:{" "}
+                          {Math.min(stat.base_stat, 150)}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
               </div>
             </div>
             <div className="moves-container">
